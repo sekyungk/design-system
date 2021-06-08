@@ -1,7 +1,7 @@
 {
   "name": "@sekyungk/design-token",
   "version": "0.0.1",
-  "description": "Design Token",
+  "description": "Yogiyo Design Token",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
