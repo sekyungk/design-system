@@ -21,11 +21,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "design-system",
         "reference": "workspace:."
+      },
+      {
+        "name": "@sekyungk/design-token",
+        "reference": "workspace:packages/design-token"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["@sekyungk/design-token", ["workspace:packages/design-token"]],
       ["design-system", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -128,6 +133,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "rollup"
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["@sekyungk/design-token", [
+        ["workspace:packages/design-token", {
+          "packageLocation": "./packages/design-token/",
+          "packageDependencies": [
+            ["@sekyungk/design-token", "workspace:packages/design-token"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["@tootallnate/once", [

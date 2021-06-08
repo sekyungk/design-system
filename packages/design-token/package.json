@@ -1,0 +1,21 @@
+{
+  "name": "@sekyungk/design-token",
+  "version": "0.0.1",
+  "description": "Design Token",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c ../../rollup.config.js",
+    "release": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sekyungk/design-system.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
