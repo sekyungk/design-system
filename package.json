@@ -1,5 +1,13 @@
 {
   "name": "design-system",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach run build",
+    "release": "yarn workspaces foreach run release"
+  },
   "devDependencies": {
     "eslint": "^7.28.0",
     "prettier": "^2.3.1",
