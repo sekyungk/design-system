@@ -1,6 +1,6 @@
 {
   "name": "@sekyungk/design-token",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Yogiyo Design Token",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,8 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c ../../rollup.config.js",
-    "release": "npm publish"
+    "build": "rollup -c ../../rollup.config.js"
   },
   "repository": {
     "type": "git",

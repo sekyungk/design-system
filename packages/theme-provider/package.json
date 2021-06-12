@@ -1,0 +1,52 @@
+{
+  "name": "@sekyungk/theme-provider",
+  "version": "0.0.9",
+  "description": "Styled Components Theme Provider",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "browser": "./dist/index.js"
+    },
+    "./styled-components": {
+      "browser": "./styled-components/dist/index.js"
+    },
+    "./package.json": "./package.json",
+    "./": "./"
+  },
+  "files": [
+    "dist",
+    "styled-components/package.json",
+    "styled-components/src",
+    "styled-components/dist"
+  ],
+  "scripts": {
+    "build": "run build:src",
+    "build:src": "rollup -c ../../rollup.config.js",
+    "build:styled-components": "yarn --cwd styled-components run build",
+    "release": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sekyungk/design-system-poc.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@sekyungk/design-token": "0.0.5"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "styled-components": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.10",
+    "@types/styled-components": "^5.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "tslib": "^2.2.0"
+  }
+}
